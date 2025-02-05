@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice 1. Sorokina.V.Z", "Practice 1. Sorokina.V.Z\Practice 1. Sorokina.V.Z.csproj", "{BAE1BF5B-2C07-477C-BB0D-94CD085287AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAE1BF5B-2C07-477C-BB0D-94CD085287AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE1BF5B-2C07-477C-BB0D-94CD085287AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE1BF5B-2C07-477C-BB0D-94CD085287AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE1BF5B-2C07-477C-BB0D-94CD085287AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {751A790B-DE1F-415B-8C26-E1B4E63A1763}
+	EndGlobalSection
+EndGlobal
