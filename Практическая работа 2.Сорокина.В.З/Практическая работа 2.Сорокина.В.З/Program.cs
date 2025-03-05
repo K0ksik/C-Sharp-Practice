@@ -29,7 +29,7 @@ class Rectangle
 
     ~Rectangle()
     {
-        Console.WriteLine($"Деструктор.");
+        Console.WriteLine("Деструктор.");
     }
 
     public int Area()
