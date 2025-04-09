@@ -1,0 +1,28 @@
+﻿<Window x:Class="Задание._WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Задание._WPF"
+        mc:Ignorable="d"
+        Title="StackPanel" Height="1000" Width="1000">
+    <Grid>
+        <StackPanel x:Name="stackPanel">
+            <Button Background="Yellow" Content="Банан" />
+            <Button Background="Red" Content="Яблоко" />
+            <Button Background="Orange" Content="Апельсин" />
+            <Button Background="Green" Content="Груша" />
+            <Button Background="IndianRed" Content="Клубника" />
+
+            <CheckBox x:Name="checkBox1" IsThreeState="True" IsChecked="False" Height="50" Content="Погулять с собакой" />
+            <CheckBox x:Name="checkBox2" IsThreeState="True" IsChecked="True" Height="50" Content="Купить яблоки" />
+            <CheckBox x:Name="checkBox3" IsThreeState="True" IsChecked="{x:Null}" Height="50" Content="Сделать что-то"/>
+            <CheckBox x:Name="checkBox4" IsThreeState="True" IsChecked="True" Height="50" Content="Прийти в МПТ"/>
+
+            <RadioButton GroupName="Animals" Content="Щука" IsChecked="True" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="Animals" Content="Крокодил" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="Animals" Content="Лягушка" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="Animals" Content="Кошка" Checked="RadioButton_Checked"/>
+        </StackPanel>
+    </Grid>
+</Window>

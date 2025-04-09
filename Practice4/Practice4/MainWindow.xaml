@@ -1,0 +1,83 @@
+﻿<Window x:Class="Practice4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Инженерный калькулятор" Height="500" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0">
+            <TextBlock x:Name="ExpressionTextBlock" FontSize="20" HorizontalAlignment="Right" Margin="0,10,10,0"/>
+            <TextBox x:Name="ResultTextBlock" FontSize="50" Text="0" Margin="0" 
+                     HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
+                     IsReadOnly="True" Background="White"/>
+        </StackPanel>
+
+
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Button Grid.Row="0" Grid.Column="0" Content="sin" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="π" Click="ConstantButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="e" Click="ConstantButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="CE" Click="ClearButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="0" Grid.Column="4" Content="⌫" Click="BackspaceButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Content="x²" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="1/x" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="|x|" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="cos" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="1" Grid.Column="4" Content="tg" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Content="√x" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="(" Click="ParenthesisButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="2" Grid.Column="2" Content=")" Click="ParenthesisButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="n!" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="2" Grid.Column="4" Content="÷" Click="OperatorButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="3" Grid.Column="0" Content="xʸ" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="7" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="8" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="9" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="3" Grid.Column="4" Content="×" Click="OperatorButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="4" Grid.Column="0" Content="10ˣ" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="4" Grid.Column="1" Content="4" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="5" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="6" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="4" Grid.Column="4" Content="-" Click="OperatorButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="5" Grid.Column="0" Content="log" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="5" Grid.Column="1" Content="1" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="5" Grid.Column="2" Content="2" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="5" Grid.Column="3" Content="3" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="5" Grid.Column="4" Content="+" Click="OperatorButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+
+            <Button Grid.Row="6" Grid.Column="0" Content="ln" Click="FunctionButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="6" Grid.Column="1" Content="+/-" Click="SignButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="6" Grid.Column="2" Content="0" Click="DigitButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="6" Grid.Column="3" Content="," Click="DecimalButton_Click" FontSize="16" Margin="2" Background="CadetBlue"/>
+            <Button Grid.Row="6" Grid.Column="4" Content="=" Click="EqualsButton_Click" FontSize="16" Margin="2" Background="Azure"/>
+        </Grid>
+    </Grid>
+</Window>
+
